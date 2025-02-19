@@ -4,11 +4,11 @@ import com.hexagonal.tasks.domain.models.AdditionalTaskInfo;
 import com.hexagonal.tasks.domain.ports.in.GetAdditionalTaskInfoUseCase;
 import com.hexagonal.tasks.domain.ports.out.ExternalServicePort;
 
-public class GetAddionalTaskInfoUseCaseImpl implements GetAdditionalTaskInfoUseCase{
+public class GetAdditionalTaskInfoUseCaseImpl implements GetAdditionalTaskInfoUseCase{
 
     private final ExternalServicePort externalServicePort;
 
-    public GetAddionalTaskInfoUseCaseImpl(ExternalServicePort externalServicePort) {
+    public GetAdditionalTaskInfoUseCaseImpl(ExternalServicePort externalServicePort) {
         this.externalServicePort = externalServicePort;
     }
 

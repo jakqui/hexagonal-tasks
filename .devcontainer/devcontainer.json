@@ -16,5 +16,8 @@
             ]
         }
     },
-    "postCreateCommand": "java -version && mvn -version"
+    "postCreateCommand": "java -version && mvn -version",
+    "runArgs": [
+    "--network=puntoventa"
+  ]
 }
