@@ -11,6 +11,8 @@ docker exec -it mysqlpuntoventa mysql -u root -p
 alter user 'root'@'%' identified with mysql_native_password by 'admin1234';
 flush privileges;
 SET time_zone = 'America/Mexico_City';
+SET GLOBAL time_zone = 'America/Mexico_City';
+
 
  Motivo del problema:
 Desde MySQL 8.0, el método de autenticación predeterminado es caching_sha2_password, que ofrece 
