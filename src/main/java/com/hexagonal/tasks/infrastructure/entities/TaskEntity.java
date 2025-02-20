@@ -8,11 +8,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "task")//CAMBIAR NOMBRE DE LA TABLA EN BD
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -23,7 +25,7 @@ public class TaskEntity {
     private Long id;
     private String title;
     private String description;
-    private LocalDateTime creationdate;
+    private LocalDateTime creationDate;
     private boolean completed;
 
     public static TaskEntity fromDomainModel(Task task){
@@ -31,6 +33,6 @@ public class TaskEntity {
     }
 
     public Task toDomainModel(){
-        return new Task(id, title, description, creationdate, completed);
+        return new Task(id, title, description, creationDate, completed);
     }
 }

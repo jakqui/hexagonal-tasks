@@ -1,0 +1,22 @@
+#version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0.41
+    container_name: mysqlpuntoventa
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin1234
+      MYSQL_DATABASE: punto_venta
+    ports:
+      - "3308:3306"
+    networks:
+      - puntoventa
+    volumes:
+      - data-mysql_puntoventa:/var/lib/mysql
+
+networks:
+  puntoventa:
+    external: true
+
+volumes:
+  data-mysql_puntoventa:

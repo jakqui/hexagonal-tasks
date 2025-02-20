@@ -1,9 +1,12 @@
 package com.hexagonal.tasks.application.usecases;
 
+import org.springframework.stereotype.Service;
+
 import com.hexagonal.tasks.domain.models.Task;
 import com.hexagonal.tasks.domain.ports.in.CreateTaskUseCase;
 import com.hexagonal.tasks.domain.ports.out.TaskRepositoryPort;
 
+@Service
 public class CreateTaskUseCaseImpl implements CreateTaskUseCase {
    
     private final TaskRepositoryPort taskRepositoryPort;

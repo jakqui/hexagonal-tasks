@@ -1,0 +1,24 @@
+#COMANDOS EJECUTADOS
+docker network create puntoventa
+docker-compose up -d
+#ENTRAR A MYSQL MODO ITERACTIVO
+docker exec -it mysqlpuntoventa mysql -u root -p
+
+
+# Este comando modifica la configuración del usuario root para que utilice el método de 
+# autenticación mysql_native_password en lugar del más moderno caching_sha2_password.
+
+alter user 'root'@'%' identified with mysql_native_password by 'admin1234';
+flush privileges;
+SET time_zone = 'America/Mexico_City';
+
+ Motivo del problema:
+Desde MySQL 8.0, el método de autenticación predeterminado es caching_sha2_password, que ofrece 
+mejor seguridad y rendimiento. Sin embargo, algunos clientes MySQL más antiguos (como ciertas 
+versiones de VS Code, MySQL Workbench o librerías de conexión en Node.js, Python, etc.) no soportan 
+este método, lo que genera el error.
+
+
+
+git config --global user.name "jakqui"   
+git config --global user.email "jakqueline24@gmail.com"
