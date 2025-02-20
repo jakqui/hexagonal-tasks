@@ -13,3 +13,8 @@ create	    |Crea las tablas en cada inicio de la aplicación. Borra los datos ex
 ____________|_____________________________________________________________________________________
 create-drop	|Igual que create, pero elimina las tablas al detener la aplicación.
 ____________|_____________________________________________________________________________________
+
+
+MEJORAS:
+EN LA CAPA DE INFRASTRUCTURE AGREGAR UNA CARPETA DE IN  Y OUT
+METER COSAS DE DDD
